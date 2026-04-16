@@ -1,0 +1,50 @@
+﻿[
+    {
+        "Project":  "Central Ava",
+        "AvailableUnits":  51,
+        "UnitTypes":  "Apartment, Quad, Standalone, Townhouse, Twin House",
+        "MinPrice":  8700000,
+        "AreasByType":  "Apartment: 93.36 -\u003e 150.13 | Quad: 217 -\u003e 217 | Standalone: 265 -\u003e 265 | Townhouse: 212 -\u003e 212 | Twin House: 217 -\u003e 217",
+        "Bedrooms":  "1, 2, 3"
+    },
+    {
+        "Project":  "Garden Lakes Ava",
+        "AvailableUnits":  46,
+        "UnitTypes":  "Apartment, Standalone, Townhouse, Twin House",
+        "MinPrice":  6800000,
+        "AreasByType":  "Apartment: 71 -\u003e 154.04 | Standalone: 242 -\u003e 242 | Townhouse: 215 -\u003e 215 | Twin House: 242 -\u003e 242",
+        "Bedrooms":  "1, 2, 3"
+    },
+    {
+        "Project":  "New Cairo Ava",
+        "AvailableUnits":  50,
+        "UnitTypes":  "Apartment, Standalone, Townhouse",
+        "MinPrice":  9100000,
+        "AreasByType":  "Apartment: 75 -\u003e 178.84 | Standalone: 327.7 -\u003e 1287 | Townhouse: 159 -\u003e 216",
+        "Bedrooms":  "1, 2, 3"
+    },
+    {
+        "Project":  "Seashore Ava",
+        "AvailableUnits":  57,
+        "UnitTypes":  "Apartment, Beach Chalet, Standard Chalet, Townhouse",
+        "MinPrice":  8230000,
+        "AreasByType":  "Apartment: 65 -\u003e 138 | Beach Chalet: 100 -\u003e 135 | Standard Chalet: 76.39 -\u003e 111.99 | Townhouse: 168 -\u003e 182",
+        "Bedrooms":  "1, 2, 3"
+    },
+    {
+        "Project":  "Signature Ava",
+        "AvailableUnits":  37,
+        "UnitTypes":  "Apartment, Standalone, Townhouse, Twin House",
+        "MinPrice":  6540000,
+        "AreasByType":  "Apartment: 68.21 -\u003e 148.4 | Standalone: 240 -\u003e 268 | Townhouse: 195 -\u003e 195 | Twin House: 215 -\u003e 215",
+        "Bedrooms":  "1, 2, 3"
+    },
+    {
+        "Project":  "Terraces AVa",
+        "AvailableUnits":  7,
+        "UnitTypes":  "Standalone, Townhouse",
+        "MinPrice":  23400000,
+        "AreasByType":  "Standalone: 240 -\u003e 285 | Townhouse: 196 -\u003e 198",
+        "Bedrooms":  "N/A"
+    }
+]

@@ -1,0 +1,52 @@
+﻿
+
+Project        : Central Ava
+AvailableUnits : 51
+UnitTypes      : Apartment, Quad, Standalone, Townhouse, Twin House
+MinPrice       : 8700000
+AreasByType    : Apartment: 93.36 -> 150.13 | Quad: 217 -> 217 | Standalone: 
+                 265 -> 265 | Townhouse: 212 -> 212 | Twin House: 217 -> 217
+Bedrooms       : 1, 2, 3
+
+Project        : Garden Lakes Ava
+AvailableUnits : 46
+UnitTypes      : Apartment, Standalone, Townhouse, Twin House
+MinPrice       : 6800000
+AreasByType    : Apartment: 71 -> 154.04 | Standalone: 242 -> 242 | Townhouse: 
+                 215 -> 215 | Twin House: 242 -> 242
+Bedrooms       : 1, 2, 3
+
+Project        : New Cairo Ava
+AvailableUnits : 50
+UnitTypes      : Apartment, Standalone, Townhouse
+MinPrice       : 9100000
+AreasByType    : Apartment: 75 -> 178.84 | Standalone: 327.7 -> 1287 | 
+                 Townhouse: 159 -> 216
+Bedrooms       : 1, 2, 3
+
+Project        : Seashore Ava
+AvailableUnits : 57
+UnitTypes      : Apartment, Beach Chalet, Standard Chalet, Townhouse
+MinPrice       : 8230000
+AreasByType    : Apartment: 65 -> 138 | Beach Chalet: 100 -> 135 | Standard 
+                 Chalet: 76.39 -> 111.99 | Townhouse: 168 -> 182
+Bedrooms       : 1, 2, 3
+
+Project        : Signature Ava
+AvailableUnits : 37
+UnitTypes      : Apartment, Standalone, Townhouse, Twin House
+MinPrice       : 6540000
+AreasByType    : Apartment: 68.21 -> 148.4 | Standalone: 240 -> 268 | 
+                 Townhouse: 195 -> 195 | Twin House: 215 -> 215
+Bedrooms       : 1, 2, 3
+
+Project        : Terraces AVa
+AvailableUnits : 7
+UnitTypes      : Standalone, Townhouse
+MinPrice       : 23400000
+AreasByType    : Standalone: 240 -> 285 | Townhouse: 196 -> 198
+Bedrooms       : N/A
+
+
+
+
