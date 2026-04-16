@@ -1107,7 +1107,7 @@ let projectGalleryLightbox = null;
         backLink.href = parsed.toString();
       }
     } catch (e) {
-      backLink.href = 'Index.html';
+      backLink.href = 'index.html';
     }
   }
 })();
