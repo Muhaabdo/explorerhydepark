@@ -320,6 +320,27 @@ function getUnitTypeImage(projectId, unitType, fallbackImage) {
 
 let projectGalleryLightbox = null;
 
+function initProjectGalleryLightbox() {
+  if (document.body.dataset.page !== 'project-details') return;
+  if (!window.GLightbox) return;
+
+  var galleryLinks = document.querySelectorAll('.project-gallery-link');
+  if (!galleryLinks.length) return;
+
+  if (projectGalleryLightbox) {
+    projectGalleryLightbox.destroy();
+  }
+
+  projectGalleryLightbox = window.GLightbox({
+    selector: '.project-gallery-link',
+    touchNavigation: true,
+    loop: true,
+    zoomable: window.innerWidth <= 560,
+    openEffect: 'zoom',
+    closeEffect: 'fade'
+  });
+}
+
 // === Navigation Toggle ===
 (function () {
   const navToggle = document.querySelector('.nav-toggle');
@@ -513,6 +534,7 @@ let projectGalleryLightbox = null;
 // === Projects Page Availability Injection ===
 (function () {
   if (document.body.dataset.page !== 'projects') return;
+  if (document.body.dataset.staticListing === 'true') return;
 
   var detailsLinks = document.querySelectorAll('a.text-link[data-project-id], a.text-link[href*="projects/"]');
 
@@ -537,6 +559,9 @@ let projectGalleryLightbox = null;
 // === Project Details Page Loader ===
 (function () {
   if (document.body.dataset.page !== 'project-details') return;
+
+  initProjectGalleryLightbox();
+
   if (document.body.dataset.staticProject === 'true') return;
 
   // Get project ID from data attribute first, then URL params.
@@ -715,18 +740,7 @@ let projectGalleryLightbox = null;
       })
       .join('');
 
-    if (window.GLightbox) {
-      if (projectGalleryLightbox) {
-        projectGalleryLightbox.destroy();
-      }
-      projectGalleryLightbox = window.GLightbox({
-        selector: '.project-gallery-link',
-        touchNavigation: true,
-        loop: true,
-        openEffect: 'zoom',
-        closeEffect: 'fade'
-      });
-    }
+    initProjectGalleryLightbox();
   }
 
   // Update highlights as icon cards.
