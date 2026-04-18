@@ -450,10 +450,7 @@ function initProjectGalleryLightbox() {
   }
 
   function getPrivacyPolicyPath() {
-    if (window.location.pathname.toLowerCase().includes('/projects/')) {
-      return '../privacy-policy.html';
-    }
-    return 'privacy-policy.html';
+    return '/privacy-policy.html';
   }
 
   function hasSeenNotice() {
@@ -985,10 +982,7 @@ function initProjectGalleryLightbox() {
   bindFormattedNumericField(fieldMonthly);
 
   function getThankYouPath() {
-    if (window.location.pathname.toLowerCase().includes('/projects/')) {
-      return '../thank-you.html';
-    }
-    return 'thank-you.html';
+    return '/thank-you.html';
   }
 
   function resolveProjectName(projectId) {
