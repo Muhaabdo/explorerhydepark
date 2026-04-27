@@ -200,6 +200,52 @@ function formatAreaRange(min, max) {
   return `${min} - ${max} م2`;
 }
 
+var FORMSUBMIT_PRIMARY_EMAIL = 'info@explorerhydepark.com';
+var FORMSUBMIT_CC_EMAIL = 'muha.abdo@gmail.com';
+var FORMSUBMIT_THANK_YOU_URL = 'https://explorerhydepark.com/thank-you.html';
+
+function getOrCreateHiddenInput(form, name) {
+  var existing = form.querySelector(`input[type="hidden"][name="${name}"]`);
+  if (existing) return existing;
+
+  var hidden = document.createElement('input');
+  hidden.type = 'hidden';
+  hidden.name = name;
+  form.appendChild(hidden);
+  return hidden;
+}
+
+function configureFormSubmit(form, options) {
+  if (!form) return;
+
+  var config = options || {};
+  form.action = `https://formsubmit.co/${FORMSUBMIT_PRIMARY_EMAIL}`;
+  getOrCreateHiddenInput(form, '_cc').value = FORMSUBMIT_CC_EMAIL;
+  getOrCreateHiddenInput(form, '_captcha').value = 'false';
+  getOrCreateHiddenInput(form, '_template').value = 'table';
+
+  if (config.subject) {
+    getOrCreateHiddenInput(form, '_subject').value = config.subject;
+  }
+
+  if (config.nextPath) {
+    getOrCreateHiddenInput(form, '_next').value = config.nextPath;
+  }
+}
+
+// Apply shared FormSubmit settings to any static form carrying data-formsubmit="true".
+(function () {
+  var forms = document.querySelectorAll('form[data-formsubmit="true"]');
+  if (!forms.length) return;
+
+  forms.forEach(function (form) {
+    configureFormSubmit(form, {
+      subject: form.getAttribute('data-formsubmit-subject') || '',
+      nextPath: form.getAttribute('data-formsubmit-next') || FORMSUBMIT_THANK_YOU_URL
+    });
+  });
+})();
+
 function getProjectIdFromHref(href) {
   if (!href) return null;
   try {
@@ -906,10 +952,11 @@ function initProjectGalleryLightbox() {
         <h2 id="installment-modal-title">اطلب خطة سداد مخصصة</h2>
         <p class="installment-modal-note">ادخل بيانات التواصل لإرسال خطط السداد</p>
 
-        <form id="installment-form" class="installment-form" action="https://formsubmit.co/muha.abdo@gmail.com" method="POST">
+        <form id="installment-form" class="installment-form" action="https://formsubmit.co/info@explorerhydepark.com" method="POST">
           <input type="hidden" name="project_id" id="installment-project-id" />
           <input type="hidden" name="source_page" id="installment-source-page" />
           <input type="hidden" name="source_url" id="installment-source-url" />
+          <input type="hidden" name="_cc" value="muha.abdo@gmail.com" />
           <input type="hidden" name="_subject" id="installment-subject" value="طلب خطة سداد جديد" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
@@ -956,6 +1003,11 @@ function initProjectGalleryLightbox() {
   var fieldNext = document.getElementById('installment-next');
   var fieldDownPayment = document.getElementById('installment-down-payment');
   var fieldMonthly = document.getElementById('installment-monthly-payment');
+
+  configureFormSubmit(form, {
+    subject: 'طلب خطة سداد جديد',
+    nextPath: FORMSUBMIT_THANK_YOU_URL
+  });
 
   function normalizeNumericInput(value) {
     return String(value || '')

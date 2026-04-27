@@ -931,6 +931,59 @@ form,
   margin-bottom: 16px;
 }
 
+.legal-page {
+  max-width: 980px;
+  margin-inline: auto;
+}
+
+.legal-toolbar {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+}
+
+.legal-updated {
+  color: var(--text-soft);
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.legal-section {
+  margin-bottom: 18px;
+}
+
+.legal-section h2 {
+  margin-bottom: 8px;
+}
+
+.legal-list {
+  margin: 0;
+  padding-inline-start: 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.thank-you-page {
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+.thank-you-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  background: linear-gradient(180deg, #ffffff 0%, #f6faff 100%);
+  box-shadow: var(--shadow-card);
+  padding: 26px;
+}
+
+.thank-you-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-block: 14px 20px;
+}
+
 form {
   display: grid;
   gap: var(--space-2);
